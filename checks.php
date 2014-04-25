@@ -92,7 +92,7 @@
                             <td><label>Select Check:</label>
                             <div class="line-separator"></div>
                             <td><select  name = 'findEditDetails' id = 'findEditDetails' onclick = 'populateEditDetails()' >
-                            <?php include 'includes/findChecks.php';?>
+                            <?php include 'includes/listChecks.php';?>
                             <input type = "hidden" name = "viewTypeIds" id = "viewTypeIds" />
                             <input type = "hidden" name = "viewIds" id = "viewIds" />
                                      

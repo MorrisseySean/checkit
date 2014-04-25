@@ -18,7 +18,7 @@
 			</div>
 			<!--Content placed here appears in the overlay created by the create button-->
 			<div id="createcheck" class="overlay-box-create">
-				<div class="overlay-content-create">					
+				<div class="overlay-content-create" id="create-form">					
 					<form method = "POST" action = "includes/CreateCheck.php">
 						<input type = "hidden" name = "confirm" id = "confirm"> <!-- Will allow information to be passed to the database, sets to "no" or "yes" depending on the confirmation answer from the "confirmCheck" function -->
 						<table class="null-content">
@@ -50,9 +50,8 @@
 							<tr><th>Edit Check</th></tr>
 							<tr>
 								<td><label>Select Check-Type:</td>
-								<td><select name = 'TypeId' id = 'TypeId'>
+								<select name = 'TypeId' id = 'TypeId'>
 								<?php include 'includes/findCheckType.php';?> <!-- this php call will help populate the list in the findCheckType function -->							
-								</td>
 							</tr>								
 							<tr>
 								<td>

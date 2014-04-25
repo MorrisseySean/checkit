@@ -18,9 +18,11 @@
                 
 	$allText="$checkTypeId,$checkId,$checkDesc,$checkTypeCode";
 			
-	echo "<optgroup label = " . $checkTypeCode . " >";
-            echo "<option value = '$allText' > $checkDesc </option>";
-                echo "</optgroup>";                   
+			echo "<tr>";
+			echo "<td>" . $checkDesc . "</td>";
+			echo "<td>" . $checkTypeCode . "</td>";
+			echo "<td><input id=$checkId name='selection' type='radio' value='Edit'/></td>";
+			echo "</tr>"; // This echo statement will return these variable created above, back to the listbox                  
 	}
 	echo "</select>";
 
