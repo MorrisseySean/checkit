@@ -1,0 +1,118 @@
+/*Table formatting for each of the pages*/
+#input-form{
+	background-color:#F2F7F9;
+    width: 465px;
+    height: 300px;
+    padding:20px;
+    margin: 50px auto;    
+    border: 6px solid #8FB5C1;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+
+}
+#input-form th{
+font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;	
+font-weight: normal;
+font-size: 2.15em;
+letter-spacing: .2em;
+line-height: 1.1em;
+margin-bottom: 15px;
+margin:0px;
+text-align: left;
+text-transform: uppercase;
+}
+#input-form label{
+display: block;
+float: left;
+text-align: left;
+font-weight: bold;
+color: grey;
+}
+#input-form  select{
+ position: absolute;
+ left: 250px;
+ top: 85px;
+ font-size: 15px;
+ margin-bottom: 2px;
+ padding: 4px;
+}
+input-form input, textarea{
+ font-size: 15px;  
+ width: 450px;
+ border: 1px solid #CEE1E8;
+ margin-bottom: 20px;  
+ padding: 4px;
+}
+#input-form input:focus, 
+#input-form select:focus, 
+#input-form textarea:focus {
+ border: 1px solid #AFCDD8;
+ background-color: #EBF2F4;
+}
+#input-form textarea{
+   height: 150px;
+   resize: none;
+}
+#input-form label {
+    display: block;
+}
+
+
+button{
+/*define specific properties for the input fields with the class name of description */
+float:left;
+font-size:18px;
+padding:4px 2px;
+border:solid 2px black;
+width:200px;
+margin:2px 0 20px 10px;
+}
+#button {
+   border: 2px solid #264d63;
+   background: #0564a3;
+   background: -webkit-gradient(linear, left top, left bottom, from(#c3d1db), to(#0564a3));
+   background: -webkit-linear-gradient(top, #c3d1db, #0564a3);
+   background: -moz-linear-gradient(top, #c3d1db, #0564a3);
+   background: -ms-linear-gradient(top, #c3d1db, #0564a3);
+   background: -o-linear-gradient(top, #c3d1db, #0564a3);
+   background-image: -ms-linear-gradient(top, #c3d1db 0%, #0564a3 100%);
+   padding: 13px 26px;
+   -webkit-border-radius: 24px;
+   -moz-border-radius: 24px;
+   border-radius: 24px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   color: #2a5775;
+   font-size: 20px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#button:hover {
+   border: 2px solid #418a50;
+   text-shadow: #1e4158 0 1px 0;
+   background: #3e779d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+   background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+   background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+   background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+   background: -o-linear-gradient(top, #65a9d7, #3e779d);
+   background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+   color: #fff;
+   }
+#button:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 2px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   }
