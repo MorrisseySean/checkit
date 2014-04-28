@@ -8,8 +8,8 @@
 	}
 	mysql_select_db("checkit",$connect);	
 	
-	$listChecksQuery = mysql_query("SELECT checks.Id, checks.Description FROM checks");
-	echo "<tr><td><select id = 'listItem0'>";
+	$listChecksQuery = mysql_query("SELECT checks.Id, checks.Description FROM checks ORDER BY Description");
+	echo "<tr><td><select id = 'listItem[0]'>";
 		while($row = mysql_fetch_array($listChecksQuery))
 		{
 			$checkId = $row['Id'];
