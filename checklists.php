@@ -11,11 +11,12 @@
 			<div id="create" class="overlay-box-create">
 				<div id ="createcontent" class="overlay-content-create">
 					<form method = "POST" action = "includes/savelist.php">
+					<input type = "submit" value = "Save"></input>
 						<table id="input-table" class ="null-content">								
 							<tr><th>Create Checklist</th></tr>
 							<tr><td>Checklist Name:<input type="text" name="listName" id="listName"/></td></tr>
 							<tr><td><center><input type = "button" id="add-new" value="Add Check"/>
-							<input type = "submit" value = "Save"></input></center></td></tr>
+							</center></td></tr>
 							<?php include('includes/listChecks.php');?>							
 						</table>
 					</form>
