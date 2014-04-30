@@ -1,11 +1,11 @@
 <?php
-if(isset($_POST['viewId'])){
+if(isset($_POST['showDesc'])){
    
     include 'connection.php';
 			
-	$deleteCheckQuery = "DELETE FROM checks WHERE Id = '$_POST[viewId]'";
+	$deleteCheckQuery = "DELETE FROM checks WHERE Id = '$_POST[viewCheckIdDelete]'";
 	
-	if(!mysql_query($deleteCheckQuery, $connect)){
+	if(!mysql_query($deleteCheckQuery)){
             echo "Error". mysql_error();
 	}
 	else{	
@@ -24,5 +24,5 @@ if(isset($_POST['viewId'])){
        }	  
 	}
     }
-    mysql_close($connect);
+   
 ?>

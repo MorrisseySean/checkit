@@ -9,6 +9,7 @@
 <script type="text/javascript">
 //anylinkcssmenu.init("menu_anchors_class"); ////Pass in the CSS class of anchor links (that contain a sub menu) 
 // <li><a class="extendleft show-popup-create" href ="#">Create Check</a></li>	
+// name ='checkEditDetails' id ='checkEditDetails' onclick ='showCheck()'
 anylinkcssmenu.init("anchorclass");
 </script>
 <div id="sidemenu" class="extendleft">
@@ -16,11 +17,11 @@ anylinkcssmenu.init("anchorclass");
 	<li><a href="#" class="anchorclass" rel="submenu1">Create</a></li>
         <div id="submenu1" class="anylinkcss">
         <ul>
-            <li><a onclick = 'showCreateCheckPopUp();'id ="showCreateCheck" href ="#">Create Check</a></li>	
-            <li><a onclick = 'showCreateCheckTypePopUp();'id ="showCreateCheckType" href ="#">Create Check Type</a></li>	
+            <li><a onclick='showCreateCheckPopUp();'id="showCreateCheck" href="#">Create Check</a></li>	
+            <li><a onclick='showCreateCheckTypePopUp();'id="showCreateCheckType" href="#">Create Check Type</a></li>	
         </ul>
         </div>
-            <li><a class="extendleft show-popup-edit" href="#">Edit</a></li>
+            <li><a class="extendleft show-popup-edit" href="#" >Edit</a></li>
             <li><a class="extendleft show-popup-delete" href="#">Delete</a></li>	
 	</ul>
 </div>
