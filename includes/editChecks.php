@@ -1,10 +1,11 @@
 <?php
-if(isset($_POST['viewDescs']))
+if(isset($_POST['showDescr']))
 {	
+        
 	include 'connection.php';
 	
-	$editCheck = "UPDATE checks SET Description = '$_POST[viewDescs]', TypeId = '$_POST[viewTypeIds]' WHERE Id = '$_POST[viewIds]' AND TypeId = '$_POST[viewTypeIds]'";
-	if(!mysql_query($editCheck, $connect))
+	$editCheck = "UPDATE checks SET Description = '$_POST[showDescr]', TypeId = '$_POST[viewCheckTypeIdEdit]' WHERE Id = '$_POST[viewCheckIdEdit]' AND TypeId = '$_POST[viewCheckTypeIdEdit]'";
+	if(!mysql_query($editCheck))
 	{
 		die('Error ' . mysql_error());
 	}
