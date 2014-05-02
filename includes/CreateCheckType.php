@@ -10,11 +10,10 @@ if(isset($_POST['Id'])) // /checks if the form has been submitted by checking on
         ('$_POST[code]')";
 		
         if(!mysql_query($createCheckType)){
-            die('Error ' . mysql_error());
+           // die('Error ' . mysql_error());
 	}
 	//return to checks page with updated info
-	header("location: /checks.php");
-	
+	header("location: /checks.php");	
      }
      else{
        header("location: /checks.php");

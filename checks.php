@@ -45,8 +45,8 @@
                                     </td>
                                 </tr>								
                                 </table>	 
-                                <button id ="button" type ="submit" name ="Confirm">Save</button>
-                                <button id ="button" type ="reset" name ="cancel">Cancel</button>
+                                <button id ="buttonA" type ="submit" name ="Confirm">Save</button>
+                                <button id ="buttonB" type ="reset" name ="cancel">Cancel</button>
                             </form>					
                         </div>
                    </div>
@@ -56,7 +56,7 @@
                        <div id ="my-form" class= "myform">	
                         <form method ="POST" action ="includes/CreateCheck.php">
                          <input type ="hidden" name ="confirm" id ="confirm"> <!-- Will allow information to be passed to the database, sets to "no" or "yes" depending on the confirmation answer from the "confirmCheck" function -->
-                            <table class ="null-content" cellpadding ="3" cellspacing ="15" >
+                            <table class ="null-content" cellpadding ="2" cellspacing ="5" >
 				<tr>
                                     <th>Create Check</th>
                                 </tr>
@@ -69,13 +69,13 @@
 				</tr>								
 				<tr>
                                     <td>
-                                    </label> Enter a Description:</label>
+                                    <label> Enter a Description:</label>
                                     <textarea rows ="4" cols ="40" type ="text" name ='Description' id ='Description' ></textarea>
                                     </td>
                                 </tr>																				
                             </table>	
-                            <button id ="button" type ="submit" name ="Confirm">Save</button>
-                            <button id ="button" type ="reset" name ="cancel">Cancel</button>
+                            <button id ="buttonA" type ="submit" name ="Confirm">Save</button>
+                            <button id ="buttonB" type ="reset" name ="cancel">Cancel</button>
 			</form>
                        </div>
                     </div>
@@ -87,7 +87,7 @@
                             <form method = "POST" name = "editForm" action = "includes/editChecks.php">
                                 <table class ="null-content" cellpadding ="1" cellspacing ="15">
                                 <tr>
-                                    <th>Edit Check</th>
+                                    <th>Re-edit Check</th>
                                 </tr>                           
                                 <tr>
                                     <td><label>Description:</label>
@@ -98,8 +98,8 @@
                                     </td>
                                 </tr>	
                                 </table>
-                                <button id ="button" type ="submit" name ="Confirm">Save</button>
-                                <button id ="button" type ="reset" name ="cancel">Cancel</button>	
+                                    <button id ="buttonA" type ="submit" name ="Confirm">Save</button>
+                                    <button id ="buttonB" type ="reset" name ="cancel">Cancel</button>	
                             </form>
                          </div>
                       </div>
@@ -108,21 +108,21 @@
             <div class ="overlay-content-delete">
             <div id="my-form" class="myform">
 		<form method ="POST" action ="includes/deleteCheck.php">                 
-                    <table class="null-content" cellpadding ="1" cellspacing="15">
+                    <table class="null-content" cellpadding ="2" cellspacing="15">
                         <tr>
                             <th> Delete a Check </th>           
                         </tr>
 			<tr>                 
                             <td><label> Description: </label>
                             <div class="line-separator"></div>
-                               <input type = "hidden" name = "viewCheckIdDelete" id = "viewCheckIdDelete" />
-                             <input type = "hidden" name = "viewCheckTypeIdDelete" id = "viewCheckTypeIdDelete" />
+                            <input type = "hidden" name = "viewCheckIdDelete" id = "viewCheckIdDelete" />
+                            <input type = "hidden" name = "viewCheckTypeIdDelete" id = "viewCheckTypeIdDelete" />
                             <textarea rows="6" cols="40"  name = 'showDesc' id = 'showDescDelete'></textarea>		
                             </td>
                         </tr>		
                     </table>
-                        <button id = "button" type = "submit" name = "Confirm">Delete</button>
-                        <button id = "button" type = "reset" name = "cancel">Cancel</button>
+                        <button id = "buttonA" type = "submit" name = "Confirm">Delete</button>
+                        <button id = "buttonB" type = "reset" name = "cancel">Cancel</button>
                 </form>
             </div>                
             </div>
