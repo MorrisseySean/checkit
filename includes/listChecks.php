@@ -9,14 +9,16 @@
 	mysql_select_db("checkit",$connect);	
 	
 	$listChecksQuery = mysql_query("SELECT checks.Id, checks.Description FROM checks ORDER BY Description");
-	echo "<tr><td><select id = 'listItem[0]'>";
+	echo "<tr><td>";
+	echo "<select id = 'listItem[]' name = 'listItem[]'>";
 		while($row = mysql_fetch_array($listChecksQuery))
 		{
 			$checkId = $row['Id'];
 			$checkDesc = $row['Description'];			
 			echo "<option id = '$checkId' name = 'check' value ='$checkId'>$checkDesc</option>"; // This echo statement will return these variable created above, back to the listbox 
 		}
-	echo "</select></td></tr>";
+	echo "</select>";
+	echo "</td></tr>";
 	mysql_close($connect);
 }
 ?>
