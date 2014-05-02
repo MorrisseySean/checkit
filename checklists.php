@@ -10,15 +10,14 @@
 			</div>
 			<div id="create" class="overlay-box-create">
 				<div id ="createcontent" class="overlay-content-create">
-					<form method = "POST" action = "includes/savelist.php">
-					<input type = "submit" value = "Save"></input>
+					<form method = "POST" action = "includes/savelist.php">						
 						<table id="input-table" class ="null-content">								
 							<tr><th>Create Checklist</th></tr>
 							<tr><td>Checklist Name:<input type="text" name="listName" id="listName"/></td></tr>
-							<tr><td><center><input type = "button" id="add-new" value="Add Check"/>
-							</center></td></tr>
+							<tr><td><center><input type = "button" id="add-new" value="Add Check"/></center></td></tr>
 							<?php include('includes/listChecks.php');?>							
 						</table>
+						<input type = "submit" value = "Save"></input>
 					</form>
 				</div>
 			</div>			

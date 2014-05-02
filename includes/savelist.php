@@ -2,37 +2,28 @@
 if(isset($_POST['listName']))
 {	
 	include 'connection.php';
-	//Create the checklist using the given name.	
-	$createList = "INSERT into checklist(Name) VALUES('$_POST[listName]')";
-	if(!mysql_query($createList))
+	
+	//Create the checklist using the given name.
+	$name = $_POST['listName'];
+	$stmt = $dbh->prepare("INSERT into checklist (Name) VALUES (?)");
+	$stmt->execute(array($name));
+	
+	//Finds the Id of the newly created list
+	$stmt = $dbh->prepare("SELECT checklist.Id FROM checklist WHERE checklist.Name = '$_POST[listName]'");
+	if($stmt->execute())
 	{
-        die('Error ' . mysql_error());
+		$listId = $stmt->fetchColumn();
 	}
-	//Get id of new checklist
-	$getListId = "SELECT checklist.Id FROM checklist WHERE checklist.Name = '$_POST[listName]'";	
-	$listId = mysql_query($getListId);
-	if(!mysql_query($getListId))
-	{
-			die('Error ' . mysql_error());
-	}
+	
 	//Prepares statement to map checks to the checklist
 	$stmt = $dbh->prepare("INSERT into checkmapping (checkId, checklistId, CheckNumber) VALUES (?, ?, ?)");
-	//Places the array into a variable
 	$checksArray = $_POST['listItem'];
-	$checkNo = 0;
+	$checkNo = 0;	
 	//Loops through and executes the prepared statements with the values
 	foreach($checksArray as $arrayItem)
 	{
-		echo $arrayItem;
 		$checkNo++;
-		$stmt->execute(array('$arrayitem', '$listId', '$checkNo'));
-		/*$insertList = "INSERT into checkmapping (checkId, checklistId, CheckNumber) VALUES('$arrayItem', '$listId', '$checkNo')";
-		if(!mysql_query($insertList))
-		{
-			die('Error ' . mysql_error());
-		}*/
+		$stmt->execute(array($arrayItem, $listId, $checkNo));
 	}
-	//return to checks page with updated info
-	
 }
 ?>
