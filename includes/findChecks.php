@@ -18,11 +18,11 @@
 	$allText="$checkId,$checkTypeId,$checkDescription,$checkIds,$checkTypeIds,$checkDescriptions";
 	
 	echo "<tr>";
-	echo "<td>" . $checkDescription . "</td>";
-	echo "<td>" . $checkTypeCode . "</td>";
-	echo "<td><input type='radio' name='checks' value='$allText'   /></td>";
-	echo "</tr>"; // This echo statement will return these variable created above, back to the listbox 
-      
+            echo "<td>" . $checkDescription . "</td>";
+            echo "<td>" . $checkTypeCode . "</td>";
+            echo "<td><input type='radio' name='checks' value='$allText' /></td>";
+            echo "<input name = 'checks' type = 'hidden' value ='0' />"; // set a default value for radio buttons, will allow a value to be posted regardless 
+        echo "</tr>";
     }
      echo "<input type='hidden' id ='showDescs' name='showDesc' class='details' />";   
      echo "</form>"; 
@@ -32,11 +32,11 @@
 <script language="JavaScript"> 
   
     var checkDetails = document.forms['checkEditForm'].elements['checks'];
-    var sel, result;
+    var result;
     
     for (var i=0, len=checkDetails.length; i<len; i++) {
         
-        checkDetails[i].onclick = function() {
+        checkDetails[i].onclick = function(){
             this.form.showDesc.value = this.value;
             x =this.value;
             //document.getElementById("showDesc").innerHTML=x;

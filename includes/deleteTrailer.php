@@ -3,10 +3,10 @@ if(isset($_POST['showDesc'])){
    
     include 'connection.php';
 			
-	$deleteCheckQuery = "DELETE FROM checks WHERE Id = '$_POST[viewCheckIdDelete]'";
+	$deleteTrailerQuery = "DELETE FROM trailer WHERE Id = '$_POST[viewTrailerIdDelete]'";
 	
-	if(!mysql_query($deleteCheckQuery)){
-            /////////////////////////////
+	if(!mysql_query($deleteTrailerQuery)){
+          ///////////////////////
 	}
 	else{	
             if(mysql_affected_rows() !=0){  	
@@ -14,9 +14,9 @@ if(isset($_POST['showDesc'])){
                     <head>
                     <meta http-equiv="refresh" content="0">
                     </head>';
-                    header("location: /checks.php");		 
+                    header("location: /trailers.php");		 
              }else{
-                header("location: /checks.php");	
+                header("location: /trailers.php");	
             }	  
 	}
     }

@@ -83,26 +83,6 @@ a
 
 a:hover{background-color:Navy; color:White;} /*Changes color of button when hovered over*/
 
-/*Table formatting for each of the pages*/
-table, th, td
-{
-	border:1px solid black;
-	border-collapse:collapse;
-	padding: 0em 2em;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:2em;
-	text-align:center;
-}
-th
-{
-	background-color:Navy;
-	color:White;
-}
-#editCheck table, th, td
-{
-	
-}
 #sidemenu
 {
 	width:15%;

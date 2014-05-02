@@ -8,7 +8,7 @@ if(isset($_POST['Description']))
 	('$_POST[Description]','$_POST[TypeId]')";
 	
 	if(!mysql_query($createCheck)){
-            die('Error ' . mysql_error());
+           // die('Error ' . mysql_error());
 	}
 	//return to checks page with updated info
 	header("location: /checks.php");
