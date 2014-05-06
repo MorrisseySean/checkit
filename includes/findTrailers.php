@@ -27,12 +27,12 @@
 <html>
 <script language="JavaScript"> 
   
-    var checkDetails = document.forms['trailerEditForm'].elements['trailers'];
+    var trailerDetails = document.forms['trailerEditForm'].elements['trailers'];
     var result;
     
-    for (var i=0, len=checkDetails.length; i<len; i++) {
+    for (var i=0, len=trailerDetails.length; i<len; i++) {
         
-        checkDetails[i].onclick = function() {
+        trailerDetails[i].onclick = function() {
             this.form.showDesc.value = this.value;
             x =this.value;
             //document.getElementById("showDesc").innerHTML=x;

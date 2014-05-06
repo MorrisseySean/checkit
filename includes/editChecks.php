@@ -1,11 +1,11 @@
 <?php
-if(isset($_POST['showDescr']))
-{	   
+   
     include 'connection.php';
-    $Desc = $_POST['showDescr'];
-    $TypeId = $_POST['viewCheckTypeIdEdit']; 
-    $Id = $_POST['viewCheckIdEdit']; 
-
+    // use "filter_input" instead of $_POST, as $_POST can be a security issue 
+    $Desc = filter_input(INPUT_POST, "showDescr");
+    $TypeId = filter_input(INPUT_POST, "viewCheckTypeIdEdit"); 
+    $Id = filter_input(INPUT_POST, "viewCheckIdEdit");
+        
     // Create a update check sql statement 
     $editCheck = $db->prepare("UPDATE checks SET Description = :Desc, TypeId = :TypeId WHERE Id = :Id AND TypeId = :TypeId");
     
@@ -21,5 +21,5 @@ if(isset($_POST['showDescr']))
      catch(PDOException $e){
         echo errorHandle($e);
      }
-}
+
 ?>

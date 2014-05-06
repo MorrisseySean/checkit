@@ -1,10 +1,10 @@
 <?php
-if(isset($_POST['showDesc'])){
+if(isset(filter_input(INPUT_POST,"showDesc"))){
    
     include 'connection.php';
-    
-    $viewTrailerIdDelete = $_POST['viewTrailerIdDelete'];
-   			
+    // use "filter_input" instead of $_POST, as $_POST can be a security issue 
+    $viewTrailerIdDelete = filter_input(INPUT_POST, "viewTrailerIdDelete");
+            		
     $deleteTrailerQuery = $db->prepare("DELETE FROM trailer WHERE Id = :viewTrailerIdDelete");
 	
     // bindValue binds a value to a parameter

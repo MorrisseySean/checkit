@@ -13,7 +13,7 @@
 	<?php include('includes/navbar.php'); ?>
         <?php include('includes/overlay.php'); ?>
     <body>
-		<div id="container">	
+            <div id="container">	
 		<?php include('includes/sidemenu.php'); ?>
                     <div id="content" class="extendright">
 				<table>
@@ -26,8 +26,8 @@
                                             <?php include 'includes/findTrailers.php'; ?>
 					</tr>
 				</table>
-			</div>
-		</div>
+                    </div>
+            </div>
                <div id="createcheck" class="overlay-box-create">
                     <div class="overlay-content-create">	
                         <div id="my-form" class="myform">	
@@ -61,9 +61,9 @@
                                 </tr>
                                 <tr>
                                     <td><label>Description:</label>
-                                    <div class ="line-separator"></div>
-                                    <input type = "hidden" name = "viewTrailerIdEdit" id = "viewTrailerIdEdit" />  
-                                    <textarea  name ="showDescr" id ="viewTrailerCodeEdit" rows ="6" cols ="40" > </textarea>  
+                                        <div class ="line-separator"></div>
+                                        <input type = "hidden" name = "viewTrailerIdEdit" id = "viewTrailerIdEdit" />  
+                                        <textarea rows="6" cols ="40"  placeholder="Please enter a description!" name ="showDescr" id ="viewTrailerCodeEdit"></textarea>  
                                     </td>
                                 </tr>
                                 </table>
@@ -78,23 +78,22 @@
                         <div id="my-form" class="myform">
                             <form method ="POST" action ="includes/deleteTrailer.php">                 
                               <table class="null-content" cellpadding ="2" cellspacing="15">
-                              <tr>
-                                <th> Delete a Trailer</th>           
-                              </tr>
-                              <tr>                 
-                                <td><label> Description: </label>
-                                <div class="line-separator"></div>
-                                <input type = "hidden" name = "viewTrailerIdDelete" id = "viewTrailerIdDelete" />
-                                <textarea rows="6" cols="40"  name = 'showDesc' id = 'viewTrailerCodeDelete'></textarea>		
-                            </td>
-                        </tr>		
-                    </table>
-                        <button id = "buttonA" type = "submit" name = "Confirm">Delete</button>
-                        <button id = "buttonB" type = "reset" name = "cancel">Cancel</button>
-                </form>
-            </div>                
-            </div>
-            </div>
-      
+                                <tr>
+                                    <th> Delete a Trailer</th>           
+                                </tr>
+                                <tr>                 
+                                    <td><label> Description: </label>
+                                    <div class="line-separator"></div>
+                                    <input type = "hidden" name = "viewTrailerIdDelete" id = "viewTrailerIdDelete" />
+                                    <textarea rows="6" cols="40"  name = 'showDesc' id = 'viewTrailerCodeDelete' readonly></textarea>		
+                                    </td>
+                                </tr>		
+                            </table>
+                                <button id = "buttonA" type = "submit" name = "Confirm">Delete</button>
+                                <button id = "buttonB" type = "reset" name = "cancel">Cancel</button>
+                            </form>
+                        </div>                
+                    </div>
+                </div>       
 	</body>
 </html>

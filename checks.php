@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang ="en">
-<head>
-<!-- Linked (External) style sheet -->
-<link rel ="stylesheet" type = "text/css" href = "static/formStyleCheck.css">
-<link rel ="stylesheet" type = "text/css" href = "static/stylesheet.css">
+    <head>
+        <!-- Linked (External) style sheet -->
+        <link rel ="stylesheet" type = "text/css" href = "static/formStyleCheck.css">
+        <link rel ="stylesheet" type = "text/css" href = "static/stylesheet.css">
 
 
-<script type = "text/javascript" src="/static/formscripts.js"></script> 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-</head>
+        <script type = "text/javascript" src="/static/formscripts.js"></script> 
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    </head>
 	<?php include('includes/header.php'); ?>
 	<?php include('includes/navbar.php'); ?>
 	<?php include('includes/overlay.php'); ?>
-	<body>
-		<div id="container">	
+    <body>
+            <div id="container">	
                 <?php include('includes/checkSideMenu.php'); ?>
                 <div id="content" class="extendright">
                     <table>
@@ -23,9 +23,9 @@
 			<th>Select</th>
                     </tr>
                     <?php include 'includes/findChecks.php'; ?>
-                    </table>
-                   
+                    </table>   
 		</div>
+            </div>
 		<!--Content placed here appears in the overlay created by the create button-->
                 <div id ="createcheckType" class ="overlay-box-createType">
                     <div class="overlay-content-createType">	
@@ -41,7 +41,7 @@
                                     <td><label>Enter Type:</label>
                                     <div class ="line-separator"></div>
                                     <textarea rows ="6" cols ="40" placeholder ="Please enter a description!" name ="code" id ="code" ></textarea>
-                                    <input type = "hidden" name ="Id" id ="Id">
+                                   
                                     </td>
                                 </tr>								
                                 </table>	 
@@ -70,7 +70,7 @@
 				<tr>
                                     <td>
                                     <label> Enter a Description:</label>
-                                    <textarea rows ="4" cols ="40" type ="text" name ='Description' id ='Description' ></textarea>
+                                    <textarea rows ="4" cols ="40"  name ="Description" id ="Description" ></textarea>
                                     </td>
                                 </tr>																				
                             </table>	
@@ -94,7 +94,7 @@
                                     <div class ="line-separator"></div>
                                     <input type = "hidden" name = "viewCheckIdEdit" id = "viewCheckIdEdit" />
                                     <input type = "hidden" name = "viewCheckTypeIdEdit" id = "viewCheckTypeIdEdit" />
-                                    <textarea  name ="showDescr" id ="showDescEdit" rows ="6" cols ="40" > </textarea>  
+                                    <textarea  rows="6" cols ="40"  placeholder="Please enter a description!" name ="showDescr" id ="showDescEdit"></textarea>  
                                     </td>
                                 </tr>	
                                 </table>
@@ -117,7 +117,7 @@
                             <div class="line-separator"></div>
                             <input type = "hidden" name = "viewCheckIdDelete" id = "viewCheckIdDelete" />
                             <input type = "hidden" name = "viewCheckTypeIdDelete" id = "viewCheckTypeIdDelete" />
-                            <textarea rows="6" cols="40"  name = 'showDesc' id = 'showDescDelete'></textarea>		
+                            <textarea rows="6" cols="40"  name = 'showDeleteDesc' id = 'showDescDelete' readonly></textarea>		
                             </td>
                         </tr>		
                     </table>
@@ -127,6 +127,6 @@
             </div>                
             </div>
             </div>
-        </div>
-	</body>
+      
+    </body>
 </html>

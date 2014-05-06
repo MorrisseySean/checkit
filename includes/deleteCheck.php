@@ -1,10 +1,10 @@
 <?php
-if(isset($_POST['showDesc'])){
-   
+
     include 'connection.php';
-    $Id = $_POST['viewCheckIdDelete'];
-    
-// Create a delete check sql statement
+    // use "filter_input" instead of $_POST, as $_POST can be a security issue 
+    $Id = filter_input(INPUT_POST, "viewCheckIdDelete");
+          
+    // Create a delete check sql statement
     $deleteCheckQuery = $db->prepare("DELETE FROM checks WHERE Id = :Id"); // using name placeholders
     
     // bindValue binds a value to a parameter
@@ -17,5 +17,5 @@ if(isset($_POST['showDesc'])){
      catch(PDOException $e){
         echo errorHandle($e);
      }
-}
+
 ?>
