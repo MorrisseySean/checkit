@@ -4,16 +4,19 @@ if(isset($_POST['Code'])) //if the hidden input called confirm was set to yes th
     if($_POST['confirm']=="yes"){
         
         include 'connection.php';
+        $trailerDesc = $_POST['Code'];
         
-        $createTrailer ="INSERT INTO trailer(Code)
+        $createTrailer = $db->prepare("INSERT INTO trailer(Code)
         VALUES
-        ('$_POST[Code]')";
-        
-        if(!mysql_query($createTrailer)){
-          //  die('Error ' . mysql_error());
-	}
-	//return to checks page with updated info
-	header("location: /trailers.php");
+        (?)");
+
+        try{
+            $createTrailer->execute();    
+            header("location: /checks.php");
+        }
+        catch(PDOException $e){
+            echo errorHandle($e);
+        }
     }
 }
 ?>

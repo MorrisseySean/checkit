@@ -1,16 +1,20 @@
 <?php
 if(isset($_POST['Description']))
 {	
-	include 'connection.php';
-		
-	$createCheck = "INSERT into checks(Description, TypeId)
-	VALUES
-	('$_POST[Description]','$_POST[TypeId]')";
-	
-	if(!mysql_query($createCheck)){
-           // die('Error ' . mysql_error());
-	}
-	//return to checks page with updated info
-	header("location: /checks.php");
+    include 'connection.php';
+    $Desc = $_POST['Description'];
+    $TypeId = $_POST['TypeId'];
+    
+    $createCheck = $db->prepare("INSERT into checks(Description, TypeId)
+    VALUES
+   (?), (?)");
+   	
+    try{
+        $createCheck->execute($array($Desc,$TypeId));    
+        header("location: /checks.php");
+    }
+    catch(PDOException $e){
+        echo errorHandle($e);
+    }
 }
 ?>

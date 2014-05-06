@@ -2,11 +2,11 @@
 {
     include 'Connection.php';
     
-    $findTrailer = mysql_query("SELECT trailer.Id, trailer.Code FROM trailer ORDER BY Id");
+    $findTrailer = $db->query("SELECT trailer.Id, trailer.Code FROM trailer ORDER BY Id");
     
     echo "<form action = '#' method = 'post' class = 'trailerForm' id = 'trailerEditForm'>";
     
-    while($row = mysql_fetch_array($findTrailer)){
+    while($row = $findTrailer->fetch(PDO::FETCH_ASSOC)){
         $trailerId = $row['Id'];
         $trailerCode = $row['Code'];
         $trailerIds = $row['Id'];

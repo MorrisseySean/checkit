@@ -1,13 +1,13 @@
 <?php
     include 'Connection.php';
 
-    // Created an sql query called "findCheckTypesQuery" to return the related fields from the checktype table to be used to populate the listbox ad form fields in the CreateCheck.html.php
+    // Created an query called "findCheckTypesQuery" to return the related fields from the checktype table to be used to populate the form fields 
 	
-    $findCheckQuery = mysql_query("SELECT checks.Description, checks.Id, checks.TypeId, checktype.Code FROM checks, checktype WHERE checks.TypeId = checktype.Id");
+    $findCheckQuery = $db->query("SELECT checks.Description, checks.Id, checks.TypeId, checktype.Code FROM checks, checktype WHERE checks.TypeId = checktype.Id");
 	
     echo "<form action = '#' method = 'post' class = 'checkForm' id = 'checkEditForm'>";
     
-    while($row = mysql_fetch_array($findCheckQuery)){
+    while($row =$findCheckQuery->fetch(PDO::FETCH_ASSOC)){
 	$checkId = $row['Id'];
         $checkTypeId = $row['TypeId'];
         $checkDescription = $row['Description'];
