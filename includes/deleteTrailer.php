@@ -2,22 +2,20 @@
 if(isset($_POST['showDesc'])){
    
     include 'connection.php';
-			
-	$deleteTrailerQuery = "DELETE FROM trailer WHERE Id = '$_POST[viewTrailerIdDelete]'";
+    
+    $viewTrailerIdDelete = $_POST['viewTrailerIdDelete'];
+   			
+    $deleteTrailerQuery = $db->prepare("DELETE FROM trailer WHERE Id = :viewTrailerIdDelete");
 	
-	if(!mysql_query($deleteTrailerQuery)){
-          ///////////////////////
-	}
-	else{	
-            if(mysql_affected_rows() !=0){  	
-                echo '
-                    <head>
-                    <meta http-equiv="refresh" content="0">
-                    </head>';
-                    header("location: /trailers.php");		 
-             }else{
-                header("location: /trailers.php");	
-            }	  
-	}
-    }
+    // bindValue binds a value to a parameter
+    $deleteTrailerQuery ->bindValue(':viewTrailerIdDelete', $viewTrailerIdDelete, PDO::PARAM_STR); 
+    
+    try{
+       $deleteTrailerQuery->execute();
+        header("location: /trailers.php");	
+     }
+     catch(PDOException $e){
+        echo errorHandle($e);
+     }
+}
 ?>

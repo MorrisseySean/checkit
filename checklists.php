@@ -17,7 +17,7 @@
 							<tr><td><center><input type = "button" id="add-new" value="Add Check"/></center></td></tr>
 							<?php include('includes/listChecks.php');?>							
 						</table>
-						<input type = "submit" value = "Save"></input>
+						<input type = "submit" value = "Save"/>
 					</form>
 				</div>
 			</div>			
