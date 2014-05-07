@@ -38,6 +38,7 @@
 	box-shadow: 0 0 5px rgba(0,0,0,0.9);
 }
 
+
 /*Removes excess from the edges of the page*/
 html{overflow-x:hidden;}
 
@@ -61,6 +62,22 @@ h3 li{display:inline-block;} /*Displays the main menu options horizontally*/
 body{background-color:#CEE3F6;}
 p{padding: 1em 2em}
 
+/*Formatting for tables*/
+#table-div table, tr, th, td
+{
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+#table-div th
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 40px;
+	color: white;
+	background-color: Navy;
+}
 /*List of formatting for buttons on the page*/
 ul
 {

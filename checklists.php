@@ -7,6 +7,9 @@
 		<div id="container">	
 			<?php include('includes/sidemenu.php'); ?>
 			<div id="content" class="extendright">
+				<div id="table-div">
+					<?php include('includes/findLists.php');?>
+				</div>
 			</div>
 			<div id="create" class="overlay-box-create">
 				<div id ="createcontent" class="overlay-content-create">
